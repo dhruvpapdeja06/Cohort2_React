@@ -61,9 +61,47 @@ let container = React.createElement('div',{style:{backgroundColor:"lightblue"}},
 // In java we put the code in byte format, so server can execute fast.
 
 // Optimize code 
-// 1.Remove the space, comment 
+// 1.Remove the space, comment ,img , videos so i want that my file will be compressed so that size will reduced.
+// Ex - 100mb size game VS 1GB game , 100mb game will execute fast.
 // 2.Some code of React , ReactDOM that is not require remove it , that functionality we don't use it , SO how i do it? --> Bundlers can do that part
 
-// We have lots of dependencies that my React code is used that is handle by bundler.
+// We have lots of dependencies that my React code is used that is handle by bundler that is used in it and packed it one file.
+
+// We are using parcel --> other bunder format will change , bundling time some algo will written , like react , reactdom which functionality they use.
+
+// npm --> public registry/open source (packgage/library) code are there for community so that anyone can use it. like parcel,typescript compiler, React,ReactDOM available.(Lots of things related to JS that help in dev are there.)
+
+// npm init --> Any packet take from here all the info present in it.
+
+// when we install the parcel they install the node_modules ok that parcel present in it but why other modules come --> beacuase of dependencies.
+// Who write the parcel module that are not written form scratch that can use other module.
+
+// Example --> I created a digital clock --> some one add calender --> Task Scheduler --> Fitness Measurement (All the code come inside the node module ) --> host on npm registry
+
+// "^19.2.2" --> ^ symbol carrot (minor or patch accept) (~ patches update) (Major --> you have to told it)
+// first --> Major
+// second --> minor (Functionality added)
+// third --> patch (bug like security solve in it)
+
+
+// Example --> Minor (v18)
+function sum(a,b){
+    return a + b; // type of int , not add string 
+}
+
+function sub(a,b){
+    return a - b;
+}
+
+// Major Update (v19)--> Use latest --> then previous code bug it 
+function sum(a,b,c){
+    return a + b + c;
+}
+
+// package-lock.json --> contain all the dependencies with there versions.
+// (node-module is not recommended to push on github because there size is heavy)
+// cmd --> npm install (all the depedencies come from this package-lock.json comes here) --> if package-lock.json(Exact version) is deleted then in this case how to install it
+
+// Then project check which dependency install if not given package-lock then minor update also install 
 
 root.render(container);

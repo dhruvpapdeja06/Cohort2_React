@@ -18,7 +18,7 @@ h2.style.fontSize = "2rem";
 
 //Problem Statement -->  Now i want to create 3 more element but it is tedious for to write same code again and again 
 
-// To solve that we can create a method inside obj / function 
+// To solve that problem we can create a method (function inside obj). 
 
 // styles = {fontSize: "1.4rem", color:"red", backgroundColor: "gray"};
 
@@ -40,7 +40,7 @@ const React = {
  
 
         for(let key in styles){
-            // so here key is JS variable we can't acess with dot otherwise it will give me undefined.
+            // so here key is JS variable we can't access with dot otherwise it will give me undefined.
             element.style[key] = styles[key];
         }
 

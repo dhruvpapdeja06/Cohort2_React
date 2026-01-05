@@ -1,19 +1,17 @@
 React --> 
 
-What is React? --> JS Library (Benefit of Library) --> Code that i write in Js to develop project it requires  more line,  same thing  we do in React  less line.
+What is React? --> JS Library (Benefit of Library) --> To develop the project in Js we have to write more lines of code, same thing we do with the help of React(less lines).
 
-Optimization provide, Netflix,FB,Instagram and zomato are built with help of React. Work we do with the help of react same work we also do with the help of Js.
+Optimization provide, Netflix,FB,Instagram and zomato are built with help of React. 
 
-Like in C++ we have array we can perform operation but it is static to solve that problem we have  
-Vector to easy our work.(STL Library basically do our easy)
+The work we do with the help of react same work we also do with the help of Js.
 
-Why we need it ? , 
+Like in C++ we have array we can perform operation on it and it's nature is static.
+To solve that problem we have Vector(dynamic in nature) easily perform opertation.(STL Library(easy our work)
 
-
-Create our own React? --> Not write code on React 
+Why we need React --> To optimize the code ,appication load fast ,interactive UI   
+Create our own React? --> Not write code on React (Creating our Own React Library (Approcah) 
 
 Handling all the use case , or we can use it that is already written by FB developer that is optimized and used by many company.
-(By handling all the cases we can create our own library)
 
-
-React is Js we can work in short by structure our code.
+React provide folder structure with the help of bundler to optimize it.
