@@ -24,6 +24,44 @@ const ol = React.createElement('ol',{},li1,li2,li3)
 // Create container to pass all the elements at once
 const container = React.createElement("div",{},[h1,p1,h2,p2,h3,ol]);
 
+
+                                // React                Render 
+// React.createElement --> react element(JS Object) ==> HTML element
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(container);
+
+                                        
+// JSX --> JavaScript XML : HTML code direct write iniside the JS.
+// JSX --> HTML like syntax 
+
+// Bable convert this JSX code(Transpiler/Compiler) --> React element(object) 
+
+// I want to put muliple element inside it because it only expect single element.
+
+// It's also allow JSX expression inside it
+
+const fName = "Developer";
+const user = {
+    age: 22,
+    salary: 32000
+}
+
+const element = (
+    <>
+        <h3>Understanding Babel and JSX</h3>
+        <h4 id="h4" className="heading">This is JSX (HTML code inside the JavaScript to easy developer life)</h4>
+        <h5>This make code more readiable put it inside the div or empty tag</h5>
+        {/* We can pass Js Expression but don't pass statement and obj */}
+        <p>You are a {fName} and Your salary is {user.salary}</p>
+
+    </>
+)
+// convert like this React.createElement('h4',{},children);
+
+console.log(element);
+
+
+// root.render(container);
+root.render([container,element]);
+
