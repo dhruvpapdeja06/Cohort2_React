@@ -1,0 +1,209 @@
+import React from "react"
+import ReactDOM from "react-dom/client"
+
+// Card Data
+const fashionData = [
+  {
+    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+    name: "Ethnic Wear",
+    offer: "Up to 50% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d",
+    name: "Casual Shirts",
+    offer: "Min 40% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    name: "Denim Jeans",
+    offer: "Buy 1 Get 1 Free",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf",
+    name: "Women Kurtas",
+    offer: "Flat 60% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb",
+    name: "Summer Dresses",
+    offer: "Under ₹999",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+    name: "Party Wear",
+    offer: "Extra 10% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    name: "Men T-Shirts",
+    offer: "Starting ₹399",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae",
+    name: "Formal Shirts",
+    offer: "Flat 45% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f",
+    name: "Women Tops",
+    offer: "Min 30% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956",
+    name: "Ethnic Kurtis",
+    offer: "Up to 55% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d",
+    name: "Track Pants",
+    offer: "Buy 2 @ ₹999",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1542060748-10c28b62716f",
+    name: "Winter Jackets",
+    offer: "Up to 40% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    name: "Men Blazers",
+    offer: "Flat 35% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1495385794356-15371f348c31",
+    name: "Women Sarees",
+    offer: "Min 50% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+    name: "Anarkali Suits",
+    offer: "Extra ₹500 OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1531727991582-cfd25ce79613",
+    name: "Men Hoodies",
+    offer: "Starting ₹799",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e",
+    name: "Women Leggings",
+    offer: "Flat 30% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1545291730-faff8ca1d4b0",
+    name: "Palazzo Pants",
+    offer: "Min 35% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    name: "Men Sneakers",
+    offer: "Up to 45% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c",
+    name: "Women Flats",
+    offer: "Starting ₹499",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    name: "Kids Wear",
+    offer: "Min 40% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1520974735194-6c1c5a0f2b95",
+    name: "Men Jeans",
+    offer: "Flat 50% OFF",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1519744346363-dc3b28c8b7b8",
+    name: "Women Nightwear",
+    offer: "Buy 2 Save More",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1484516758160-69878111a911",
+    name: "Men Shorts",
+    offer: "Under ₹599",
+    shopNow: "Shop Now"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1544717305-996b815c338c",
+    name: "Festive Wear",
+    offer: "Up to 65% OFF",
+    shopNow: "Shop Now"
+  }
+];
+
+
+// component card
+
+const Card = ()=>{
+    return (
+        <div id="main">
+            <div className="card">
+                <div id="top">
+                    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" />
+                </div>
+                <div id="bottom">
+                    <h3>Ethnic Wear</h3>
+                    <h2>Up to 50% OFF</h2>
+                    <p>Shop Now</p>
+                </div>
+            </div>
+        </div>
+        
+    ) 
+}
+
+
+
+
+
+const App = ()=>{
+    return (
+    <div>
+        <Card/>
+        <Card/>
+    </div>
+
+
+
+// Header
+
+
+
+// main 
+
+
+
+
+
+
+//  Footer
+)
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<App/>)

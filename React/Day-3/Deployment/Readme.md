@@ -37,3 +37,8 @@
 <!-- For testing purpose I deploy on netlify -->
 
 <!-- By inspecting we can get only the front-end code , not able to see the Backend Logic -->
+
+<!-- remove the file from stage permanent -->
+
+git rm -r --cached React/Day-3/Deployment/.parcel-cache/
+git rm -r --cached React/Day-3/Deployment/dist/
