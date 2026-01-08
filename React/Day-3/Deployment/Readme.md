@@ -29,10 +29,10 @@
 
 # npx build parcel index.html
 
-<!-- Bundle -> Bundle the whole code in dist folder after optimization of img,videos and all dependencies is handle by parcel that file it gives -->
-<!-- In dist folder parcel create the production code that deploy on the production, remember first remove the map file before push in prouduction beacuse of that we can get the orgional code  -->
+<!-- Bundle -> Bundle the whole code in dist folder.Optimization of img,videos and all dependencies is handle by parcel that file we have it. -->
+<!-- In dist folder parcel create the production-level code that deploy on the production, remember first remove the map file before push in prouduction beacuse of that we can get the origional code  -->
 
-<!-- From the map file we can the business logic of company, My End-goal is to show the website to interact doesn't matter what code is written behind it. -->
+<!-- From the map file + js file we can get the business logic of company, My End-goal is to show the website to user ,It doesn't matter what code is written behind it. -->
 
 <!-- For testing purpose I deploy on netlify -->
 
