@@ -124,9 +124,9 @@
           --3.Text Content change Orange
           --4. Create new element and text content Banana 
 
-          Now change in real DOM. 
+          Now change in real DOM. --> Based on changes detect.
 
-          React compare based on postion , how React can know what changes , happen , for that we can use then it 
+          React compare based on position(Behind key) , how React can know what changes , happen , for that we can use then it 
           not compare based on postion , compare based on key.
 
           In first solution i have to select element and chage there textCOntent (4 Operation Perform)
@@ -136,6 +136,10 @@
           2.In Real DOM Apple is in 1 position , but in new Virtual DOM it's positon in 2 place.
 
           ---> In Real DOM , ul list create add first Item as Mango
+
+
+          Detect changes based on key if the key doesn't exist then based on that element create .
+          Apple in real dom at first position but in virtual there positon chage.
 
           Parent --> 
 
@@ -147,8 +151,33 @@
           Here only One Operation Only add child as First child , added as first 
           In Index way it same as Positon compare
   
-  
-  
+          Problem --> 
+          We create a clock program to create it when i append without key pass then other key who hold some 
+          state not able to hold that give to new clock.
+
+
+          Any component state will attach with key when it re-render it otherwise state management problem.
+
+          State attach to key.
+
+
+          (VT Reimplementaion --More Optimized , statechage --function re-render , Js is Single Threade , then go build tree)
+          React fibre --> In process of creating virtual tree if any input come from the user in that process 
+          before react fibre tree remove from the stack , handle the user input after create the VT.
+
+          But this process is not efficent and problem is solve by react Fibre,that you feel your laggy.
+
+          React Fibre stop the process of VT.(Mutliple things at same) --> how to make it possible
+
+          Tree build first left child then right child , stored it stack using recurision and possibility 
+          stack memory error , size is small 
+
+          (Tree build DFS process ) --> i don't use , solve using while loop.
+
+          Parent 
+        |  |     |
+      child1  -- child2  --> Parent point to left child ,left child point to parent ,and child point to sibling child
+      WHy this Data Structue solve using loop.
   
   
    */}

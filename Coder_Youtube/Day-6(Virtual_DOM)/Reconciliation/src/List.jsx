@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import Food from './Food'
 
+const List = ()=>{
 
-function List(){
+    const [listItems,setListItems ] = useState(['Apple','Orange','Pineapple']);
     
-    return(
-        <div>
+    function handleChange(){
+        setListItems(['Mango',...listItems]);
+    }
 
+    return (
+        <div>
+            <button onClick={handleChange}>Add Items</button>
+            <Food foods={listItems}></Food>
         </div>
     )
 }
