@@ -4,20 +4,17 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 // import Counter from './Counter.jsx'
-// import Clock from './Clock'
 
+// All Property --> copy
 
-// console.log(<h1>Hello buddy</h1>);
+// const h3 = document.createElement('h3');
+// console.dir(h3);
 
-// const element = document.createElement('h1');
-// element.textContent = "Hello Buddy ";
-
-// console.dir(element);
-
-
+// Limited property -- copy
+// console.log(<h1>Hello Buddy</h1>); 
 
 createRoot(document.getElementById('root')).render(
   <>
     <App />
-  </>
+  </>,
 )
