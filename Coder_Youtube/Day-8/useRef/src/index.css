@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+  height: 100vh;
+  background: linear-gradient(to bottom,rgba(21, 21, 88, 0.993),rgb(24, 24, 71));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+h2{
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+button{
+  padding: .5rem .8rem;
+  border: none;
+  background-color: rgb(255, 165, 0);
+  border-radius: .3rem;
+  margin-right: .5rem;
+  margin-top: 1.5rem;
+  color: rgb(13, 27, 70);
+  font-size: large;
+  font-weight: 600;
+}
