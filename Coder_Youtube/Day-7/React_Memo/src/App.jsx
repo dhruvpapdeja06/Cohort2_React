@@ -1,6 +1,8 @@
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState ,useCallback} from 'react';
 import Math from "./Math"
+import Post from "./Post"
+import Test from "./Test"
 
 // Primitive vs Non-primitve pass in hook
 const App = ()=>{
@@ -8,6 +10,7 @@ const App = ()=>{
   const [count,setCount] = useState(0);
   const [number,setNumber] = useState(100000);
   console.log("App");
+
 
   // function handleChange(){
 
@@ -76,13 +79,26 @@ const App = ()=>{
     return total;
   },[number]);
 
-  function handleClick(){
+  // function lexical value ko markdown here count value is 0(Global scope value store), It prevent the older value
+  const handleClick = useCallback(()=>{
     console.log("Function is nothing basically an Object that across re-render occupy memory");
-  }
+    console.log(count);
+  },[count]);
 
   // UseCallback remember the funciton across the re-render (This function not depend on count,number)
-  handleClick();
+  // handleClick();
 
+  // By useMemo we can solve the problem of obj 
+  const obj = useMemo(()=>{
+    return {name: "AI", age: "22"}
+  },[])
+
+
+  // Homework --> useCallback --> As a props you pass a function to the children component
+  const childProp = useCallback(()=>{
+    console.log('Button clicked in the child component!');
+    // setMessage('Message updated from child!');
+  },[])
 
 return(
     <div className="parent">
@@ -95,8 +111,14 @@ return(
       <h2>Your Current Number : {number}</h2>
       <button onClick={()=>{setNumber(number + 100)}}>Increment Number</button>
 
+      <button onClick={handleClick}>Click</button>
       <Math number={1000}></Math> 
       <h3>Total No of Prime Numbers is : {prime}</h3>
+      {/*The Post component is not depend on any value why this re-render it? beause you pass an object ,
+      it compare based on reference , In Js we have two obj in which content is same base they take different
+      space in memory , primitive compare base on the value  , In Obj it create a new obj  */}
+      <Post value={obj}></Post>
+      <Test onButtonClick={childProp}></Test>
     </div>
   )
 }
