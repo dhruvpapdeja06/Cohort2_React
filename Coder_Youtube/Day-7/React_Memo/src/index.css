@@ -59,6 +59,7 @@ button {
   border: none;
   margin: 0.5rem;
   color: rgb(13, 94, 160);
+  margin-bottom: 3rem;;
 }
 
 button:active {

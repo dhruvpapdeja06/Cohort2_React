@@ -178,7 +178,9 @@
         |  |     |
       child1  -- child2  --> Parent point to left child ,left child point to parent ,and child point to sibling child
       WHy this Data Structue solve using loop.
-  
+
+
+      // Behind the scenen linked List, there is way to optimize it 
   
    */}
 
